@@ -1,0 +1,42 @@
+/*C++ Program to Search Apartment in locality*/
+
+#include <iostream>
+#include<stdio.h>
+
+using namespace std;
+
+int main()
+{   
+    int s,i,k=0,n;
+    //print no of apartments in locality//
+    cout<<"Enter the no of apartments in locality";
+    cin>>n;
+    //define the data type of array//
+    int ap[n];
+    cout<<"Enter the apartment's no";
+    //Store the apartment no which are in locality//
+    for (i=0;i<n;i++)
+        cin>>ap[i];
+    //print the apartment's which are in locality//        
+    for (i=0;i<n;i++)
+        cout<<ap[i]<<" ";
+    cout<<endl;    
+    //Apartment no which is to search//
+    cout<<"emter apartment no to search";
+    cin>>s;
+    for(i=0;i<n;i++)
+    {  
+        if(ap[i]==s)/*search the apartment in locality if found then break*/
+        {   k+=1;
+            break;
+        }
+    }
+    if(k==0)
+    {
+      cout<<"Not Found";
+    }
+    else
+    {
+        cout<<"found";
+    }
+}
